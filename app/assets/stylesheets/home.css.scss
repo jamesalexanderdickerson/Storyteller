@@ -1,0 +1,46 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.button {
+  margin: 0 auto;
+  padding: -20px 0;
+  color: white;
+}
+
+#welcome {
+  width: 80%;
+  margin: 0 auto;
+  & h1 {
+    text-align: center;
+  }
+  & p {
+    font-size: 1em;
+  }
+  @media screen and (max-width: 480px) {
+    & .panel {
+      width: 98%;
+    }
+    width: 90%;
+    margin-right: 28px;
+  }
+}
+
+#facebook {
+  background-color: #293E6A;
+  border-radius: 5px;
+  display: inline-block;
+  padding: 5px;
+  box-shadow: 2px 2px 8px #381004;
+  color: white;
+  & a {
+    text-decoration: none;
+  }
+  &:hover {
+    background-color: #463EFF;
+  }
+}
+
+#panel {
+  background-color: brown;
+  padding: 10px;
+}

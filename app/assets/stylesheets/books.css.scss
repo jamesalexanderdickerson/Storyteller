@@ -1,0 +1,151 @@
+// Place all the styles related to the Books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+body {
+	padding: 0;
+	margin: 0 auto;
+	height: 100%;
+	font-weight: 400;
+	background-image: url("../assets/wood.jpg");
+}
+.section {
+	margin-bottom: 20px;
+	text-indent: 50px;
+}
+.section:first-child {
+	text-indent: 0;
+}
+#page {
+	background-image: url("../assets/seamlesspaper1.png");
+	padding: 20px;
+	margin: 20px auto;
+	width: 70%;
+	box-shadow: 0 35px 60px 13px;
+	z-index: 0;
+	@media screen and (max-width: 480px) {
+		width: 100%;
+	}
+}
+#pagewrap {
+  margin: 0 auto;
+  width: 70%;
+  padding: 10px;
+	z-index: 0;
+	@media screen and (max-width: 480px) {
+		width: 100%;
+		padding-right: 15px;
+	}
+}
+.comment_section {
+	margin: 0 auto;
+	padding: 10px;
+	background: gray;
+}
+.dropcap {
+	float: left;
+	color: #903;
+	font-size: 75px;
+	line-height: 60px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 3px;
+}
+span:hover {
+	border-radius: 2px;
+	background: #B22D51;
+	cursor: pointer;
+}
+.box{
+  border-top: #521806 1px solid;
+  border-right: #521806 1px solid;
+  border-bottom: #962C0C 1px solid;
+  border-left: #962C0C 1px solid;
+}
+.container-1{
+  width: 200px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+	right: 20px;
+}
+.container-1 input#search{
+  width: 200px;
+  height: 25px;
+  background: #5E1C07;
+  font-size: 10pt;
+  float: left;
+  color: #9E2E0C;
+  padding-left: 45px;
+  border-radius: 50px;
+	&:focus {
+		outline: none;
+	}
+}
+.container-1 .icon{
+	top: 2px;
+  position: absolute;
+	right: 165px;
+  z-index: 1;
+  color: #9E2E0C;
+	&:hover {
+		background-color: inherit;
+	}
+}
+::-webkit-input-placeholder {
+   color: #AB320D;
+	 text-shadow: 0px 1px 1px #1C0802;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #1C0802;
+	 text-shadow: 0px 1px 1px #1C0802;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #AB320D;
+	 text-shadow: 0px 1px 1px #1C0802;
+}
+
+:-ms-input-placeholder {
+   color: #AB320D;
+	 text-shadow: 0px 1px 1px #1C0802;
+}
+.book_tab {
+	float: left;
+	margin-right: 80px;
+}
+@media screen and (max-width: 480px) {
+	.book_tab {
+		margin-left: 50px;
+	}
+}
+
+img.book_img {
+	height: 400px;
+	width: 250px;
+	box-shadow: 10px 10px 50px 0 black;
+	margin-bottom: 40px;
+}
+#listing_wrapper {
+	margin-top: 150px;
+	margin-left: 90px;
+	@media screen and (max-width: 480px) {
+		margin-left: 20px;
+	}
+}
+textarea {
+	height: 500px;
+	width: 500px;
+}
+input[type="submit"] {
+	padding: 5px;
+	border: 1px solid black;
+	background-color: #B22D51;
+	border-radius: 2px;
+}
+
+li.book_link a {
+	margin-left: 200px;
+}

@@ -1,0 +1,44 @@
+<nav>
+	<ul id="nav">
+		<li><a href="http://localhost:3000/home/show"><%= image_tag @user.image %></a></li>
+		<li><span class="logo">Storyteller</span></li>
+    <li class="book_link"><%= link_to "Books", {:controller => 'books', :action => 'index'} %></li>
+    <li><span class="icon" onclick="playAudio()"><i class="fa fa-play"></i></span></li>
+    <li><span class="icon" onclick="pauseAudio()"><i class="fa fa-pause"></i></span></li>
+
+	</ul>
+</nav>
+<br>
+<br>
+<div id="page">
+<div id="pagewrap">
+
+  <%= audio_tag(@book.audio, autoplay: true, id: "reading") %>
+
+<p id="notice"><%= notice %></p>
+
+<p style="font-family:Georgia,serif;font-size: 25px;font-variant:small-caps;">
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p style="font-family:Georgia,serif;font-size: 25px;font-variant:small-caps;">
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+<br>
+<br>
+<div id="spantext" style="font-family:Georgia,serif;font-size: 25px;font-variant:small-caps;line-height: 30px;letter-spacing: 1px;">
+<% body = eval(@book.body) %>
+  <% body.each do |section| %>
+  <div class="section">
+  <%= section %>
+  </div>
+  <% end %>
+</p>
+
+</div>
+<br>
+<%= link_to 'Back', books_path %>
+</div>
+<%= javascript_include_tag("book"+@book.id.to_s+".js") %>

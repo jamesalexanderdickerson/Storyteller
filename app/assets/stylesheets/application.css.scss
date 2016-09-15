@@ -1,0 +1,94 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+body {
+  color: black;
+}
+
+#nav {
+  background: brown;
+  padding: 10px 0;
+  margin: 0;
+  box-shadow: 0 -8px 60px 13px;
+  font-size: 1.2em;
+  height: 80px;
+  text-shadow: 2px 2px 8px #381004;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  & .logo {
+    font-family: 'Niconne', cursive;
+    font-size: 3em;
+    text-shadow: -1px 0 brown, 0 1px brown, 1px 0 brown, 0 -1px brown, 10px 10px 10px black;
+  }
+  & ul {
+    display: block;
+    margin-left: 20px;
+  }
+  & li {
+    list-style: none;
+    display: inline;
+    float: left;
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  & li:first-child {
+    margin-top: 0;
+  }
+  & li:nth-child(2) {
+    margin-top: 10px;
+  }
+  & li:nth-child(3) {
+    margin-top: 10px;
+    margin-right: 50px;
+    float: right;
+  }
+  & li:nth-child(4), li:nth-child(5), li:nth-child(6) {
+    margin-top: 20px;
+  }
+  & img {
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 2px 2px 8px #381004;
+  }
+  @media screen and (max-width: 480px) {
+    & li.book_link a{
+      display: none;
+    }
+    & li:nth-child(2) {
+      display: none;
+    }
+  }
+  & span {
+    margin-left: 50px;
+  }
+  & span:hover {
+    background: none;
+    color: red;
+  }
+}
+h1 {
+  font-family: 'Niconne', cursive;
+  font-size: 5em;
+  text-shadow: -1px 0 brown, 0 1px brown, 1px 0 brown, 0 -1px brown, 10px 10px 10px black;
+  @media screen and (max-width: 480px) {
+     font-size: 4em;
+  }
+}
